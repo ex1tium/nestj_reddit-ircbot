@@ -8,7 +8,7 @@ COPY ./package.json ./
 RUN yarn install
 COPY . .
 RUN npm run build
-RUN ls -l
+RUN pwd
 
 
 
