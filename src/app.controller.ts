@@ -17,6 +17,11 @@ export class AppController {
     private readonly appService: AppService,
     private redditService: RedditService
   ) {
+
+    if (this.appService.environment.defaultChannel) {
+      this.defaultChannel = this.appService.environment.defaultChannel
+    }
+
     this.subMap.set('events', this.appService.events$.subscribe((event) => {
       console.log('events from subject: ', event)
 

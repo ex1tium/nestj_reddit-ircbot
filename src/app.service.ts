@@ -68,6 +68,10 @@ export class AppService {
 
   }
 
+  get environment() {
+    return this.env;
+  }
+
   buffers: any[] = [];
 
   init() {
