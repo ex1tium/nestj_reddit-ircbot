@@ -27,7 +27,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN npm install -g glob rimraf yarn
+RUN npm install -g glob rimraf
 
 # RUN npm install --only=development
 RUN yarn install --only=development
